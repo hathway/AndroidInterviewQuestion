@@ -23,9 +23,9 @@ Included in the email from Hathway, you will receive a URL that can be used to r
 Implement this feature as you would in a typical project, utilizing open-source libraries and Android platform SDK's where you find it applicable to assist you. 
 
 In general, we'll be looking at:
-1. How you structure the Android application, and that you're using the SDK API's correctly
-2. Code readability & simplicity
-3. How much progress you make in the alotted time
+ 1. How you structure the Android application, and that you're using the SDK API's correctly
+ 2. Code readability & simplicity
+ 3. How much progress you make in the alotted time
 
 Don't overthink it! Don't do things differently for this exercise than what you would in a real project -- whatever you produce in this exercise is what we'll expect if we hire you!
 
