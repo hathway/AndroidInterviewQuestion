@@ -12,7 +12,9 @@ You can spend as much time on the exersize as you want, but we will primarily be
 
 ## The Challenge
 Create a simple Android application that retrieves Instagram's popular posts feed and renders it in a straightforward way such as the following example:
-(./insta-practice.png)
+<p align="center">
+<img src="insta-practice.png") alt="Example App"/>
+</p>
 Your result does not need to match this design exactly -- feel free to expand & improve on it as you see fit.
 
 Included in the email from Hathway, you will receive a URL that can be used to retrieve popular Instagram posts, and the URL will include a client_id parameter to use so that the URL can be used anonymously. You can get more information about this REST endpoint at (https://instagram.com/developer/endpoints/media/#get_media_popular)
