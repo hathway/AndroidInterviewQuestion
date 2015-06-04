@@ -1,17 +1,33 @@
 package com.hathway.androidinterviewquestion;
 
+import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import com.getinch.retrogram.Instagram;
+import com.getinch.retrogram.model.Popular;
+
+import retrofit.RestAdapter;
 
 
 public class MainActivity extends ActionBarActivity {
 
+    Instagram instagramService;
+    ListView photoListView;
+    MainActivity thisActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        thisActivity = this;
         setContentView(R.layout.activity_main);
+        photoListView = (ListView) findViewById(R.id.listView);
+
+        instagramService = new Instagram(getString(R.string.instagram_id), RestAdapter.LogLevel.HEADERS_AND_ARGS);
+        new DownloadWebpageTask().execute(instagramService);
     }
 
     @Override
@@ -34,5 +50,20 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private class DownloadWebpageTask extends AsyncTask<Instagram, Void, Popular> {
+        @Override
+        protected Popular doInBackground(Instagram... instagrams) {
+            Instagram instaSvc = instagrams[0];
+            return instaSvc.getMediaEndpoint().getPopular();
+        }
+
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(Popular popular) {
+            InstagramFeedAdapter adapter = new InstagramFeedAdapter(thisActivity, popular);
+            photoListView.setAdapter(adapter);
+        }
     }
 }
