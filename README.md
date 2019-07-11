@@ -2,7 +2,7 @@
 This programming challenge is meant to provide a programming challenge that is as close to possible to the real-world tasks that Android developers face each and every day. During the interview we'll ask you about software engineering principles like Big O notation, data structures, MVC, etc., but when the rubber meets the road, mobile developers need to create fluid user interfaces that often have complex controllers behind them, and this exercise attempts to test that aspect of the job.
 
 ## Instructions
-You can spend as much time on the exersize as you want, but we will primarily be reviewing your commits for the first hour after the initial commit of the Android project files, which must occur within a reasonable amount of time after we send you the interview question kickoff email.
+You can spend as much time on the exercize as you want, but we will primarily be reviewing your commits for the first hour after the initial commit of the Android project files, which must occur within a reasonable amount of time after we send you the interview question kickoff email.
 
 1. Create a new repository and (optionally) copy the contents of this repository to it.
 2. Create a new Android project and perform an initial commit at this point.
